@@ -2,7 +2,7 @@ import React from "react";
 import { Pager } from "react-bootstrap";
 
 import ReactPageScroller from "react-page-scroller";
-import SectionReimagine from "./sectionReimagine";
+import Section from "./Section";
 
 export default class ScrollContent extends React.Component {
     constructor(props) {
@@ -20,7 +20,6 @@ export default class ScrollContent extends React.Component {
     };
 
     getPagesNumbers = () => {
-
         const pageNumbers = [];
 
         for (let i = 1; i <= 5; i++) {
@@ -36,39 +35,22 @@ export default class ScrollContent extends React.Component {
 
         const pagesNumbers = this.getPagesNumbers();
 
-        return <div className="demo-page-contain">
-
-
-            <div
-                style={{
-                    position: "fixed",
-                    zIndex:-1,
-                    top: 0,
-                    left: 0,
-                    width: 10,//window.innerWidth,
-                    height: 10, //window.innerHeight,
-                    backgroundColor: "pink"
-                }}>
-
-                <ReactPageScroller
-                    
-                    ref={c => this._pageScroller = c}
-                    pageOnChange={this.pageOnChange}
-                    containerWidth={window.innerWidth * 0.9}
-                    containerHeight={window.innerHeight * 0.9}>
-                    <SectionReimagine color="rgba(100, 0, 0, 0.6)" />
-                    <SectionReimagine color="rgba(0, 100, 0, 0.6)" />
-                    <SectionReimagine color="rgba(0, 0, 100, 0.6)" />
-                    <SectionReimagine color="rgba(0, 100, 100, 0.6)" goToPage={this.goToPage} />
-                    <SectionReimagine color="rgba(0, 0, 0, 0.6)" />
-                </ReactPageScroller>
-            </div>
-
-
-
-            <Pager className="pagination-additional-class" bsSize="large">
-                {pagesNumbers}
-            </Pager>
-        </div >
+        return <div style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            zIndex:-1,
+        }}>
+            <ReactPageScroller
+                ref={c => this._pageScroller = c}
+                pageOnChange={this.pageOnChange}
+                containerWidth={window.innerWidth * 1}
+                containerHeight={window.innerHeight}>
+                <Section> One </Section>
+                <Section> Two </Section>
+                <Section> Three </Section>
+                <Section goToPage={this.goToPage}> Four </Section>
+            </ReactPageScroller>
+        </div>
     }
 }
