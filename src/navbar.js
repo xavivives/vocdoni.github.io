@@ -26,15 +26,30 @@ const desktopRow = {
 const row = {
     display: "flex",
     flexDirecton: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    width:"100%"
 }
 
-const column = {
+const centeredRowElement = {
     width: 350,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
 }
 
-const h3 = {
+const title = {
+    display: "flex",
+    flexDirecton: "row",
+    //justifyContent: "space-around"
+}
+
+const titleName = {
     fontSize: 24,
+    paddingRight: 20,
+}
+
+const titleLogo = {
+    
 }
 
 export default class Navbar extends React.Component {
@@ -44,9 +59,9 @@ export default class Navbar extends React.Component {
                 <Mobile>
                     <div style={fixed}>
                         <div style={{ paddingTop: 48, }}>
-                            <div style={h3}>
+                            <div style={title}>
                                 Vocdoni
-                                
+
                             </div>
                         </div>
                     </div >
@@ -57,14 +72,13 @@ export default class Navbar extends React.Component {
                         <div style={{ paddingTop: 48, }}>
                             <div style={center}>
                                 <div style={desktopRow}>
-                                    <div style={column}>
-                                    <div style={h3}>
-                                Vocdoni
-                                {VocdoniLogo()}
-    
-                            </div>
-                                </div>
-                                    <div style={column}>
+                                    <div style={centeredRowElement}>
+                                        <div style={title}>
+                                            <div style={titleName}>Vocdoni</div>
+                                            <div style={titleLogo}>{VocdoniLogo()}</div>
+                                        </div>
+                                    </div>
+                                    <div style={centeredRowElement}>
                                         <div style={row}>
                                             <div>
                                                 App
