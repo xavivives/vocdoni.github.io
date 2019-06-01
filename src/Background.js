@@ -7,14 +7,13 @@ export default class Background extends React.Component {
                 position: "fixed",
                 top: 0,
                 left: 0,
-                width:"100%",
+                width: "100%",
                 backgroundColor: "#F3F0ED",
                 padding: 10,
-                height:window.innerHeight,
+                height: window.innerHeight,
                 zIndex: -2
-                
+
             }}>
-                Vocdoni
             </div >
         )
     }
