@@ -25,11 +25,11 @@ export default class Main extends React.Component {
 
     getReimaginingPage = () => {
         return <Section
-            child1="Hello"
+            child1={this.state.currentPage}
             child2="Bye" />
     }
 
-    pageOnChange = (number) => {
+    onPageChange = (number) => {
         this.setState({ currentPage: number });
     };
 
@@ -37,7 +37,8 @@ export default class Main extends React.Component {
 
         return <div>
             <Navbar />
-            <Pages>
+            <Pages
+                onPageChange={this.onPageChange}>
 
                 {this.getReimaginingPage()}
                 {this.getReimaginingPage()}

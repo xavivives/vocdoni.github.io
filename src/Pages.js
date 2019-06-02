@@ -12,10 +12,6 @@ export default class Pages extends React.Component {
         this._pageScroller.goToPage(eventKey);
     };
 
-    pageOnChange = (number) => {
-        this.setState({ currentPage: number });
-    };
-
     render() {
 
         return <div style={{
@@ -26,7 +22,8 @@ export default class Pages extends React.Component {
         }}>
             <ReactPageScroller
                 ref={c => this._pageScroller = c}
-                pageOnChange={this.pageOnChange}
+                pageOnChange={this.props.onPageChange}
+
                 containerWidth={window.innerWidth}
                 containerHeight={window.innerHeight }>
                 {this.props.children}
