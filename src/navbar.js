@@ -10,9 +10,7 @@ const fixed = {
     position: "fixed",
     top: 0,
     left: 0,
-    height: 100,
     width: "100%",
-    backgroundColor: backgroundColor,
 }
 
 const center = {
@@ -41,13 +39,6 @@ const column = {
     alignItems: "center",
 }
 
-const centeredRow = {
-
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-}
-
 const title = {
     display: "flex",
     flexDirecton: "row",
@@ -70,9 +61,10 @@ const burguer = {
 }
 
 const navPadding = {
-    paddingTop: elementPadding * 2,
+    paddingTop: elementPadding * 4,
     paddingBottom: elementPadding,
-    width: "100%"
+    width: "100%",
+    backgroundColor: backgroundColor,
 }
 
 const singleColumn = {
@@ -132,9 +124,9 @@ export default class Navbar extends React.Component {
             <div>
                 <Mobile>
                     <div style={fixed}>
-                        <div style={singleColumnContainer}>
-                            <div style={singleColumn}>
-                                <div style={navPadding}>
+                        <div style={navPadding}>
+                            <div style={singleColumnContainer}>
+                                <div style={singleColumn}>
                                     <div style={row}>
                                         <div style={title}>
                                             <div style={titleName}>Vocdoni</div>
@@ -149,19 +141,17 @@ export default class Navbar extends React.Component {
                                                 barColor="#444" />
                                         </div>
                                     </div>
+                                    {this.renderMenu(this.state.menuIsVisible)}
                                 </div>
-
-                                {this.renderMenu(this.state.menuIsVisible)}
-
                             </div>
                         </div>
-
                     </div >
                 </Mobile>
 
                 <Default>
                     <div style={fixed}>
                         <div style={navPadding}>
+
                             <div style={center}>
                                 <div style={desktopRow}>
                                     <div style={column}>
@@ -185,9 +175,9 @@ export default class Navbar extends React.Component {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                    </div >
+                    </div>
+
                 </Default>
             </div>
         )
