@@ -22,14 +22,14 @@ const center = {
 }
 const desktopRow = {
     display: "flex",
-    flexDirecton: "row",
+    flexDirection: "row",
     width: 761,
     justifyContent: "space-between"
 }
 
 const row = {
     display: "flex",
-    flexDirecton: "row",
+    flexDirection: "row",
     justifyContent: "space-between",
     width: "100%"
 }
@@ -87,6 +87,8 @@ const singleColumnContainer = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
+    backgroundColor: backgroundColor,
+
 }
 
 const verticalButtonItem = {
@@ -142,7 +144,7 @@ export default class Navbar extends React.Component {
                                         <div style={burguer}>
                                             <HamburgerSqueeze
                                                 buttonWidth={20}
-                                                menuIsVisible={this.state.menuIsVisible}
+                                                isActive={this.state.menuIsVisible}
                                                 toggleButton={this.toggleButton}
                                                 barColor="#444" />
                                         </div>

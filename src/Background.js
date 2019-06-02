@@ -8,7 +8,8 @@ export default class Background extends React.Component {
                 top: 0,
                 left: 0,
                 width: "100%",
-                backgroundColor: "#F3F0ED",
+                //backgroundColor: "#F3F0ED",
+                backgroundColor:"red",
                 padding: 10,
                 height: window.innerHeight,
                 zIndex: -2

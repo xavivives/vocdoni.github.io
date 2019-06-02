@@ -4,6 +4,12 @@ import { Pager } from "react-bootstrap";
 import ReactPageScroller from "react-page-scroller";
 import Section from "./Section";
 
+const title = {
+    textTransform: "uppercase",
+    fontSize: 40,
+    fontWeight: 400,
+}
+
 export default class ScrollContent extends React.Component {
     constructor(props) {
         super(props);
@@ -39,14 +45,21 @@ export default class ScrollContent extends React.Component {
             position: "fixed",
             top: 0,
             left: 0,
-            zIndex:-1,
+            zIndex: -1,
         }}>
             <ReactPageScroller
                 ref={c => this._pageScroller = c}
                 pageOnChange={this.pageOnChange}
-                containerWidth={window.innerWidth * 1}
-                containerHeight={window.innerHeight}>
-                <Section> One </Section>
+                containerWidth={window.innerWidth}
+                containerHeight={window.innerHeight }>
+                <Section>
+                    <div style={title}>
+                        <b>Reimagining</b>
+                    </div>
+                    <div style={title}>
+                        Governance
+                    </div>
+                </Section>
                 <Section> Two </Section>
                 <Section> Three </Section>
                 <Section goToPage={this.goToPage}> Four </Section>
