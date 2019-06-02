@@ -2,6 +2,7 @@ import React from "react";
 import { Mobile, Default } from "./Devices"
 import VocdoniLogo from "./VocdoniLogo"
 import { HamburgerSqueeze } from 'react-animated-burgers'
+import Styles from './Styles'
 
 const backgroundColor = "#F3F0ED"
 const elementPadding = 24
@@ -13,30 +14,11 @@ const fixed = {
     width: "100%",
 }
 
-const center = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center"
-}
-const desktopRow = {
-    display: "flex",
-    flexDirection: "row",
-    width: 761,
-    justifyContent: "space-between"
-}
-
 const row = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%"
-}
-
-const column = {
-    minWidth: 350,
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
 }
 
 const title = {
@@ -52,7 +34,6 @@ const titleName = {
 }
 
 const titleLogo = {
-
 }
 
 const burguer = {
@@ -61,27 +42,12 @@ const burguer = {
 }
 
 const navPadding = {
-    paddingTop: elementPadding * 4,
+    paddingTop: elementPadding * 2,
     paddingBottom: elementPadding,
     width: "100%",
     backgroundColor: backgroundColor,
 }
 
-const singleColumn = {
-    minWidth: 300,
-    maxWidth: 400,
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-}
-
-const singleColumnContainer = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    backgroundColor: backgroundColor,
-
-}
 
 const verticalButtonItem = {
     padding: elementPadding,
@@ -125,8 +91,8 @@ export default class Navbar extends React.Component {
                 <Mobile>
                     <div style={fixed}>
                         <div style={navPadding}>
-                            <div style={singleColumnContainer}>
-                                <div style={singleColumn}>
+                            <div style={Styles.singleColumnContainer}>
+                                <div style={Styles.singleColumn}>
                                     <div style={row}>
                                         <div style={title}>
                                             <div style={titleName}>Vocdoni</div>
@@ -152,15 +118,15 @@ export default class Navbar extends React.Component {
                     <div style={fixed}>
                         <div style={navPadding}>
 
-                            <div style={center}>
-                                <div style={desktopRow}>
-                                    <div style={column}>
+                            <div style={Styles.center}>
+                                <div style={Styles.desktopRow}>
+                                    <div style={Styles.column}>
                                         <div style={title}>
                                             <div style={titleName}>Vocdoni</div>
                                             <div style={titleLogo}>{VocdoniLogo()}</div>
                                         </div>
                                     </div>
-                                    <div style={column}>
+                                    <div style={Styles.column}>
                                         <div style={row}>
                                             <div>
                                                 App
