@@ -6,12 +6,11 @@ const verticalCenter = {
     display: "flex",
     flexDirection: "row",
     alignItems: "   center",
-    backgroundColor: "blue",
     height: "100%",
 }
 
 export default class Section extends React.Component {
-    
+
     render() {
         return (
 
@@ -19,6 +18,7 @@ export default class Section extends React.Component {
                 <Mobile>
                     <div style={Styles.singleColumnContainer}>
                         <div style={Styles.singleColumn}>
+                            {this.props.title}
                             {this.props.child1}
                             {this.props.child2}
                         </div>
@@ -26,18 +26,21 @@ export default class Section extends React.Component {
                 </Mobile>
 
                 <Default>
-                    <div style={Styles.center}>
+                    <div style={Styles.singleColumnContainer}>
                         <div style={Styles.desktopRow}>
-                            <div style={Styles.column}>
-                                {this.props.child1}
+                            {this.props.title}
                             </div>
-                            <div style={Styles.column}>
-                                {this.props.child2}
+                            <div style={Styles.desktopRow}>
+                                <div style={Styles.column}>
+                                    {this.props.child1}
+                                </div>
+                                <div style={Styles.column}>
+                                    {this.props.child2}
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </Default>
             </div>
-        )
-    }
+                )
+            }
 }

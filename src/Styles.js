@@ -13,17 +13,10 @@ export default  {
 
     singleColumnContainer: {
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         justifyContent: "center",
-        backgroundColor: backgroundColor,
-        width: "100%"
-    },
-
-    center: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        backgroundColor:"pink",
+        alignItems:"center",
+        //backgroundColor: "purple",
         width: "100%"
     },
 
@@ -32,7 +25,7 @@ export default  {
         flexDirection: "row",
         width: 761,
         justifyContent: "space-between",
-        backgroundColor:"yellow"
+        //backgroundColor:"yellow"
     },
 
     column: {
@@ -40,6 +33,6 @@ export default  {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        backgroundColor:"green"
+        //backgroundColor:"green"
     }
 }

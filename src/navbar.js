@@ -118,7 +118,7 @@ export default class Navbar extends React.Component {
                     <div style={fixed}>
                         <div style={navPadding}>
 
-                            <div style={Styles.center}>
+                            <div style={Styles.singleColumnContainer}>
                                 <div style={Styles.desktopRow}>
                                     <div style={Styles.column}>
                                         <div style={title}>

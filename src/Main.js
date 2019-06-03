@@ -12,9 +12,13 @@ const title = {
 }
 
 const highlight = {
-    display: "inline",
+   // display: "inline",
     fontWeight: 600,
-    color: "red"
+}
+
+const featuredImage = {
+    maxWidth: "100%",
+    maxHeight: "100%"
 }
 
 export default class Main extends React.Component {
@@ -25,8 +29,9 @@ export default class Main extends React.Component {
 
     getReimaginingPage = () => {
         return <Section
+            title={<div style={title}> Reimagining <div style={highlight}>Governance</div></div>}
             child1={this.state.currentPage}
-            child2="Bye" />
+            child2={<img style={featuredImage} src={process.env.PUBLIC_URL + '/assets/screenshot.png'} />} />
     }
 
     onPageChange = (number) => {
