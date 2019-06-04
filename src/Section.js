@@ -7,8 +7,8 @@ const verticalCenter = {
     flexDirection: "row",
     alignItems: "   center",
     height: "100%",
-    paddingLeft: 30,
-    paddingRight: 30
+    paddingLeft: 40,
+    paddingRight: 40
 }
 
 export default class Section extends React.Component {

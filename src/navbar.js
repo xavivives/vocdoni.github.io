@@ -37,7 +37,6 @@ const title = {
 const titleName = {
     fontSize: 24,
     paddingRight: elementPadding,
-    paddingLeft: elementPadding
 }
 
 const titleLogo = {
@@ -56,28 +55,17 @@ const navPadding = {
 }
 
 
-const navButton = {
+const verticalButton = {
     cursor: "pointer",
     padding: elementPadding,
 }
 
-export default class Navbar extends React.Component {
+const horizontalButton = {
+    cursor: "pointer",
+    paddingLeft: elementPadding*2,
+}
 
-    getButtons() {
-        return [
-            <div style={navButton}>
-                <div style={Styles.highlight}>App</div>
-            </div>,
-            <div
-                onClick={(e) => window.open("http://vocdoni.io/docs")}
-                style={navButton}>
-                Open Stack
-                </div>,
-            /*<div style={navButton}>
-                Services
-                </div>*/
-        ]
-    }
+export default class Navbar extends React.Component {
 
     state = {
         menuIsVisible: false
@@ -91,10 +79,16 @@ export default class Navbar extends React.Component {
 
     renderMenu(visible) {
         if (visible) {
-            return this.getButtons()
+            return this.getButtons(verticalButton)
         }
         return <div />
     }
+
+    getButtons = (buttonStyle) => {
+        return this.props.children.map((child) => <div style={buttonStyle}>{child}</div>)
+    }
+
+    
 
     render() {
         return (
@@ -138,8 +132,7 @@ export default class Navbar extends React.Component {
                                     </div>
                                     <div style={Styles.column}>
                                         <div style={buttonsRow}>
-                                            {this.getButtons()}
-
+                                            {this.getButtons(horizontalButton)}
                                         </div>
                                     </div>
                                 </div>

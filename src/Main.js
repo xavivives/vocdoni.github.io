@@ -80,7 +80,7 @@ export default class Main extends React.Component {
                 <div>
                     <p> Powered by <div style={Styles.highlight}>Vocdoni Open Stack</div>, any third party can verifiy the integrity of the system</p>
                     <p>Don't trust us<div style={Styles.highlight}> TRUST THE MATH </div></p>
-                    <div style={Styles.button} onClick={(e)=> window.open("http://vocdoni.io/docs")}>
+                    <div style={Styles.button} onClick={(e) => window.open("http://vocdoni.io/docs")}>
                         See technical specifications
                     </div>
                 </div>
@@ -101,7 +101,7 @@ export default class Main extends React.Component {
             child2={
                 <div>
                     <p>No need for it?  Or you want to use your own authentication mechanisms?</p>
-                    <p>You can always use your own infrastructure.</p> 
+                    <p>You can always use your own infrastructure.</p>
                 </div>
             }
         />
@@ -111,10 +111,20 @@ export default class Main extends React.Component {
         this.setState({ currentPage: number });
     };
 
+    getButtons = () => {
+        return [
+            <div style={Styles.highlight}>App</div>,
+            <div onClick={(e) => window.open("http://vocdoni.io/docs")}> Open Stack</div>,
+        ]
+    }
+
     render() {
 
         return <div>
-            <Navbar />
+            <Navbar>
+                <div style={Styles.highlight}>App</div>
+                <div onClick={(e) => window.open("http://vocdoni.io/docs")}> Open Stack </div>
+            </Navbar>
             <Pages
                 onPageChange={this.onPageChange}>
 

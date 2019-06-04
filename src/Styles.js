@@ -23,13 +23,14 @@ export default {
     desktopRow: {
         display: "flex",
         flexDirection: "row",
-        maxWidth: 761,
+        maxWidth: 800,
         width: "100%",
         justifyContent: "space-between",
     },
 
     column: {
-        width: 350,
+        width: "100%",
+        maxWidth: 380,
         display: "flex",
         flexDirection: "row",
         alignItems: "flex-start",
