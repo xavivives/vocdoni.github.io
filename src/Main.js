@@ -13,14 +13,10 @@ const title = {
     paddingBottom: 50
 }
 
-
-
 const featuredImage = {
     maxWidth: "100%",
     maxHeight: "100%"
 }
-
-
 
 export default class Main extends React.Component {
     constructor(props) {

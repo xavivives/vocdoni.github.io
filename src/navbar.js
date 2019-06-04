@@ -57,6 +57,7 @@ const navPadding = {
 
 
 const navButton = {
+    cursor: "pointer",
     padding: elementPadding,
 }
 
@@ -65,14 +66,16 @@ export default class Navbar extends React.Component {
     getButtons() {
         return [
             <div style={navButton}>
-                App
-                </div>,
-            <div style={navButton}>
+                <div style={Styles.highlight}>App</div>
+            </div>,
+            <div
+                onClick={(e) => window.open("http://vocdoni.io/docs")}
+                style={navButton}>
                 Open Stack
                 </div>,
-            <div style={navButton}>
+            /*<div style={navButton}>
                 Services
-                </div>
+                </div>*/
         ]
     }
 
