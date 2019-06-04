@@ -11,7 +11,7 @@ export default class Background extends React.Component {
                 width: "100%",
                 backgroundColor: Styles.backgroundColor,
                 padding: 10,
-                height: window.innerHeight,
+                height: "100%",
                 zIndex: -2
             }}>
             </div >

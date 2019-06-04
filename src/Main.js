@@ -13,23 +13,14 @@ const title = {
     paddingBottom: 50
 }
 
-const highlight = {
-     display: "inline",
-    fontWeight: 900,
-}
+
 
 const featuredImage = {
     maxWidth: "100%",
     maxHeight: "100%"
 }
 
-const button = {
-    padding: "10px 20px 10px 20px",
-    color: Styles.backgroundColor,
-    backgroundColor: "#444",
-    borderRadius: 5,
-    display: "inline-block"
-}
+
 
 export default class Main extends React.Component {
     constructor(props) {
@@ -40,7 +31,7 @@ export default class Main extends React.Component {
     getReimaginingPage = () => {
         return <Section
             filpChildsOnMobile={true}
-            title={<div style={title}> Reimagining <div style={highlight}>Governance</div></div>}
+            title={<div style={title}> Reimagining <div style={Styles.highlight}>Governance</div></div>}
             child1={
                 <div>
 
@@ -59,10 +50,10 @@ export default class Main extends React.Component {
 
     getCommunityPage = () => {
         return <Section
-            title={<div style={title}> Make your community <div style={highlight}>thrive</div></div>}
+            title={<div style={title}> Make your community <div style={Styles.highlight}>thrive</div></div>}
             child1={
                 <div>
-                    <p>What does it meat to express your will...  <div style={highlight}>anytime, anywhere!</div></p>
+                    <p>What does it meat to express your will...  <div style={Styles.highlight}>anytime, anywhere!</div></p>
                     <p>We can make governance a conversation.</p>
 
                 </div>
@@ -71,7 +62,7 @@ export default class Main extends React.Component {
                 <div>
                     <p>Enable  frictionless participation on your community.</p>
                     <p>Let us know what you need</p>
-                    <div style={button}>
+                    <div style={Styles.button}>
                         Request invitation to join the Beta
                     </div>
                 </div>
@@ -81,7 +72,7 @@ export default class Main extends React.Component {
 
     getVotingPage = () => {
         return <Section
-            title={<div style={title}> <div style={highlight}>univesally verifiable</div> Voting system </div>}
+            title={<div style={title}> <div style={Styles.highlight}>univesally verifiable</div> Voting system </div>}
             child1={
                 <div>
                     <p>The most critical elections  today still relay on an envelop to guarantee its integrity. </p>
@@ -91,9 +82,9 @@ export default class Main extends React.Component {
             }
             child2={
                 <div>
-                    <p> Powered by <div style={highlight}>Vocdoni Open Stack</div>, any third party can verifiy the integrity of the system</p>
-                    <p>Don't trust us<div style={highlight}> TRUST THE MATH </div></p>
-                    <div style={button} onClick={(e)=> window.open("http://vocdoni.io/docs")}>
+                    <p> Powered by <div style={Styles.highlight}>Vocdoni Open Stack</div>, any third party can verifiy the integrity of the system</p>
+                    <p>Don't trust us<div style={Styles.highlight}> TRUST THE MATH </div></p>
+                    <div style={Styles.button} onClick={(e)=> window.open("http://vocdoni.io/docs")}>
                         See technical specifications
                     </div>
                 </div>
@@ -104,10 +95,10 @@ export default class Main extends React.Component {
 
     getBiometricPage = () => {
         return <Section
-            title={<div style={title}> <div style={highlight}>Biometric verification</div> with ease </div>}
+            title={<div style={title}> <div style={Styles.highlight}>Biometric verification</div> with ease </div>}
             child1={
                 <div>
-                    <p>Vocdoni integrates with the best existing <div style={highlight}>BIOMETRIC VERIFICATION</div> solutions, so you can  ensure that the participants in your organization are who you think they are.</p>
+                    <p>Vocdoni integrates with the best existing <div style={Styles.highlight}>BIOMETRIC VERIFICATION</div> solutions, so you can  ensure that the participants in your organization are who you think they are.</p>
 
                 </div>
             }

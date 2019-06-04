@@ -14,7 +14,14 @@ const fixed = {
     width: "100%",
 }
 
-const row = {
+const buttonsRow = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    width: "100%"
+}
+
+const logoBurguerRow = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -49,12 +56,25 @@ const navPadding = {
 }
 
 
-const verticalButtonItem = {
+const navButton = {
     padding: elementPadding,
 }
 
-
 export default class Navbar extends React.Component {
+
+    getButtons() {
+        return [
+            <div style={navButton}>
+                App
+                </div>,
+            <div style={navButton}>
+                Open Stack
+                </div>,
+            <div style={navButton}>
+                Services
+                </div>
+        ]
+    }
 
     state = {
         menuIsVisible: false
@@ -68,20 +88,8 @@ export default class Navbar extends React.Component {
 
     renderMenu(visible) {
         if (visible) {
-            return <div>
-
-                <div style={verticalButtonItem}>
-                    App
-                </div>
-                <div style={verticalButtonItem}>
-                    Open Stack
-                </div>
-                <div style={verticalButtonItem}>
-                    Services
-                </div>
-            </div>
+            return this.getButtons()
         }
-
         return <div />
     }
 
@@ -93,12 +101,11 @@ export default class Navbar extends React.Component {
                         <div style={navPadding}>
                             <div style={Styles.singleColumnContainer}>
                                 <div style={Styles.singleColumn}>
-                                    <div style={row}>
+                                    <div style={logoBurguerRow}>
                                         <div style={title}>
                                             <div style={titleName}>Vocdoni</div>
                                             <div style={titleLogo}>{VocdoniLogo()}</div>
                                         </div>
-
                                         <div style={burguer}>
                                             <HamburgerSqueeze
                                                 buttonWidth={20}
@@ -127,16 +134,9 @@ export default class Navbar extends React.Component {
                                         </div>
                                     </div>
                                     <div style={Styles.column}>
-                                        <div style={row}>
-                                            <div>
-                                                App
-                                            </div>
-                                            <div>
-                                                Open Stack
-                                            </div>
-                                            <div>
-                                                Services
-                                            </div>
+                                        <div style={buttonsRow}>
+                                            {this.getButtons()}
+
                                         </div>
                                     </div>
                                 </div>

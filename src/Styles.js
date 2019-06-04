@@ -1,6 +1,8 @@
-export default  {
+const backgroundColor = "#F3F0ED";
 
-    backgroundColor: "#F3F0ED",
+export default {
+
+    backgroundColor: backgroundColor,
 
     singleColumn: {
         minWidth: 250,
@@ -14,14 +16,15 @@ export default  {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignItems:"center",
+        alignItems: "center",
         width: "100%"
     },
 
     desktopRow: {
         display: "flex",
         flexDirection: "row",
-        width: 761,
+        maxWidth: 761,
+        width: "100%",
         justifyContent: "space-between",
     },
 
@@ -30,5 +33,19 @@ export default  {
         display: "flex",
         flexDirection: "row",
         alignItems: "flex-start",
+    },
+
+    button: {
+        padding: "10px 20px 10px 20px",
+        color: backgroundColor,
+        backgroundColor: "#444",
+        borderRadius: 5,
+        display: "inline-block",
+        cursor: "pointer",
+    },
+
+    highlight: {
+        display: "inline",
+        fontWeight: 900,
     }
 }
