@@ -1,7 +1,6 @@
-
-const backgroundColor = "#F3F0ED"
-
 export default  {
+
+    backgroundColor: "#F3F0ED",
 
     singleColumn: {
         minWidth: 300,
@@ -16,7 +15,6 @@ export default  {
         flexDirection: "column",
         justifyContent: "center",
         alignItems:"center",
-        //backgroundColor: "purple",
         width: "100%"
     },
 
@@ -25,14 +23,12 @@ export default  {
         flexDirection: "row",
         width: 761,
         justifyContent: "space-between",
-        //backgroundColor:"yellow"
     },
 
     column: {
         width: 350,
         display: "flex",
         flexDirection: "row",
-        alignItems: "center",
-        //backgroundColor:"green"
+        alignItems: "flex-start",
     }
 }

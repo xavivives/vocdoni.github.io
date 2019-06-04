@@ -12,8 +12,7 @@ export default class Pages extends React.Component {
         this._pageScroller.goToPage(eventKey);
     };
 
-    render() {
-
+    renderPages = () => {
         return <div style={{
             position: "fixed",
             top: 0,
@@ -25,9 +24,16 @@ export default class Pages extends React.Component {
                 pageOnChange={this.props.onPageChange}
 
                 containerWidth={window.innerWidth}
-                containerHeight={window.innerHeight }>
+                containerHeight={window.innerHeight}>
                 {this.props.children}
             </ReactPageScroller>
         </div>
+    }
+
+    render() {
+
+        return <div style={{paddingTop:100}}>
+            {this.props.children}
+        </div >
     }
 }

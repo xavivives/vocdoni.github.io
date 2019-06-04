@@ -1,4 +1,5 @@
 import React from "react";
+import Styles from "./Styles";
 
 export default class Background extends React.Component {
     render() {
@@ -8,12 +9,10 @@ export default class Background extends React.Component {
                 top: 0,
                 left: 0,
                 width: "100%",
-                backgroundColor: "#F3F0ED",
-                //backgroundColor:"red",
+                backgroundColor: Styles.backgroundColor,
                 padding: 10,
                 height: window.innerHeight,
                 zIndex: -2
-
             }}>
             </div >
         )
