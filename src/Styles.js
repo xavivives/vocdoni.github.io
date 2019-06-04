@@ -4,6 +4,15 @@ export default {
 
     backgroundColor: backgroundColor,
 
+    pageCenter : {
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "   center",
+        height: "100%",
+        paddingLeft: 40,
+        paddingRight: 40
+    },
+
     singleColumn: {
         minWidth: 250,
         maxWidth: 500,

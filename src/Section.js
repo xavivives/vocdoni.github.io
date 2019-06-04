@@ -2,15 +2,6 @@ import React from "react";
 import { Mobile, Default } from "./Devices"
 import Styles from './Styles'
 
-const verticalCenter = {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "   center",
-    height: "100%",
-    paddingLeft: 40,
-    paddingRight: 40
-}
-
 export default class Section extends React.Component {
 
     render() {
@@ -25,7 +16,7 @@ export default class Section extends React.Component {
         return (
             <div style={{ paddingTop: 60, paddingBottom: 120 }}>
 
-                <div style={verticalCenter}>
+                <div style={Styles.pageCenter}>
                     <Mobile>
                         <div style={Styles.singleColumnContainer}>
                             <div style={Styles.singleColumn}>

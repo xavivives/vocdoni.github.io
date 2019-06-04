@@ -42,11 +42,6 @@ const titleName = {
 const titleLogo = {
 }
 
-const burguer = {
-    paddingLeft: elementPadding,
-    paddingRight: elementPadding,
-}
-
 const navPadding = {
     paddingTop: elementPadding * 2,
     paddingBottom: elementPadding,
@@ -62,7 +57,7 @@ const verticalButton = {
 
 const horizontalButton = {
     cursor: "pointer",
-    paddingLeft: elementPadding*2,
+    paddingLeft: elementPadding * 2,
 }
 
 export default class Navbar extends React.Component {
@@ -88,13 +83,13 @@ export default class Navbar extends React.Component {
         return this.props.children.map((child) => <div style={buttonStyle}>{child}</div>)
     }
 
-    
+
 
     render() {
         return (
-            <div>
-                <Mobile>
-                    <div style={fixed}>
+            <div style={fixed}>
+                <div style={Styles.pageCenter}>
+                    <Mobile>
                         <div style={navPadding}>
                             <div style={Styles.singleColumnContainer}>
                                 <div style={Styles.singleColumn}>
@@ -103,23 +98,23 @@ export default class Navbar extends React.Component {
                                             <div style={titleName}>Vocdoni</div>
                                             <div style={titleLogo}>{VocdoniLogo()}</div>
                                         </div>
-                                        <div style={burguer}>
-                                            <HamburgerSqueeze
-                                                buttonWidth={20}
-                                                isActive={this.state.menuIsVisible}
-                                                toggleButton={this.toggleButton}
-                                                barColor="#444" />
-                                        </div>
+
+                                        <HamburgerSqueeze
+                                            buttonWidth={20}
+                                            isActive={this.state.menuIsVisible}
+                                            toggleButton={this.toggleButton}
+                                            barColor="#444" />
+
                                     </div>
                                     {this.renderMenu(this.state.menuIsVisible)}
                                 </div>
                             </div>
                         </div>
-                    </div >
-                </Mobile>
 
-                <Default>
-                    <div style={fixed}>
+                    </Mobile>
+
+                    <Default>
+
                         <div style={navPadding}>
 
                             <div style={Styles.singleColumnContainer}>
@@ -138,9 +133,9 @@ export default class Navbar extends React.Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                </Default>
+                    </Default>
+                </div>
             </div>
         )
     }
