@@ -3,8 +3,8 @@ export default  {
     backgroundColor: "#F3F0ED",
 
     singleColumn: {
-        minWidth: 300,
-        maxWidth: 400,
+        minWidth: 250,
+        maxWidth: 500,
         width: "100%",
         display: "flex",
         flexDirection: "column",

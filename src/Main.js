@@ -79,6 +79,47 @@ export default class Main extends React.Component {
         />
     }
 
+    getVotingPage = () => {
+        return <Section
+            title={<div style={title}> <div style={highlight}>univesally verifiable</div> Voting system </div>}
+            child1={
+                <div>
+                    <p>The most critical elections  today still relay on an envelop to guarantee its integrity. </p>
+                    <p>Vocdoni gives cryptographic guarantees and make voting trully digital.</p>
+
+                </div>
+            }
+            child2={
+                <div>
+                    <p> Powered by <div style={highlight}>Vocdoni Open Stack</div>, any third party can verifiy the integrity of the system</p>
+                    <p>Don't trust us<div style={highlight}> TRUST THE MATH </div></p>
+                    <div style={button} onClick={(e)=> window.open("http://vocdoni.io/docs")}>
+                        See technical specifications
+                    </div>
+                </div>
+            }
+        />
+    }
+
+
+    getBiometricPage = () => {
+        return <Section
+            title={<div style={title}> <div style={highlight}>Biometric verification</div> with ease </div>}
+            child1={
+                <div>
+                    <p>Vocdoni integrates with the best existing <div style={highlight}>BIOMETRIC VERIFICATION</div> solutions, so you can  ensure that the participants in your organization are who you think they are.</p>
+
+                </div>
+            }
+            child2={
+                <div>
+                    <p>No need for it?  Or you want to use your own authentication mechanisms?</p>
+                    <p>You can always use your own infrastructure.</p> 
+                </div>
+            }
+        />
+    }
+
     onPageChange = (number) => {
         this.setState({ currentPage: number });
     };
@@ -92,7 +133,8 @@ export default class Main extends React.Component {
 
                 {this.getReimaginingPage()}
                 {this.getCommunityPage()}
-                {this.getReimaginingPage()}
+                {this.getVotingPage()}
+                {this.getBiometricPage()}
 
             </Pages>
             <Background />
