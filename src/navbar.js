@@ -4,14 +4,12 @@ import VocdoniLogo from "./VocdoniLogo"
 import { HamburgerSqueeze } from 'react-animated-burgers'
 import Styles from './Styles'
 
-const backgroundColor = "#F3F0ED"
-const elementPadding = 24
-
 const fixed = {
     position: "fixed",
     top: 0,
     left: 0,
     width: "100%",
+    backgroundColor: Styles.backgroundColor,
 }
 
 const buttonsRow = {
@@ -36,28 +34,27 @@ const title = {
 
 const titleName = {
     fontSize: 24,
-    paddingRight: elementPadding,
+    paddingRight: Styles.elementPadding,
 }
 
 const titleLogo = {
 }
 
 const navPadding = {
-    paddingTop: elementPadding * 2,
-    paddingBottom: elementPadding,
+    paddingTop: Styles.elementPadding * 2,
+    paddingBottom: Styles.elementPadding,
     width: "100%",
-    backgroundColor: backgroundColor,
 }
 
 
 const verticalButton = {
     cursor: "pointer",
-    padding: elementPadding,
+    padding: Styles.elementPadding,
 }
 
 const horizontalButton = {
     cursor: "pointer",
-    paddingLeft: elementPadding * 2,
+    paddingLeft: Styles.elementPadding * 2,
 }
 
 export default class Navbar extends React.Component {

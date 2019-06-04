@@ -3,6 +3,7 @@ const backgroundColor = "#F3F0ED";
 export default {
 
     backgroundColor: backgroundColor,
+    elementPadding:24,
 
     pageCenter : {
         display: "flex",
