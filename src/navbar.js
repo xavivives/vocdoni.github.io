@@ -33,15 +33,30 @@ const title = {
 }
 
 const titleName = {
+    margin:"auto",
     fontSize: 24,
     paddingRight: Styles.elementPadding,
 }
 
+const mobileTitleName = {
+    margin:"auto",
+    fontSize: 20,
+    paddingRight: Styles.elementPadding,
+}
+
 const titleLogo = {
+    alignItems: "center",
+    display: "block",
+    margin: "auto"
 }
 
 const navPadding = {
     paddingTop: Styles.elementPadding * 2,
+    paddingBottom: Styles.elementPadding,
+    width: "100%",
+}
+const mobileNavPadding = {
+    paddingTop: Styles.elementPadding * 0.7,
     paddingBottom: Styles.elementPadding,
     width: "100%",
 }
@@ -77,7 +92,7 @@ export default class Navbar extends React.Component {
     }
 
     getButtons = (buttonStyle) => {
-        return this.props.children.map((child) => <div style={buttonStyle}>{child}</div>)
+        return this.props.children.map((child, index) => <div key={index} style={buttonStyle}>{child}</div>)
     }
 
 
@@ -87,20 +102,23 @@ export default class Navbar extends React.Component {
             <div style={fixed}>
                 <div style={Styles.pageCenter}>
                     <Mobile>
-                        <div style={navPadding}>
+                        <div style={mobileNavPadding}>
                             <div style={Styles.singleColumnContainer}>
                                 <div style={Styles.singleColumn}>
                                     <div style={logoBurguerRow}>
-                                        <div style={title}>
-                                            <div style={titleName}>Vocdoni</div>
-                                            <div style={titleLogo}>{VocdoniLogo()}</div>
-                                        </div>
+
 
                                         <HamburgerSqueeze
                                             buttonWidth={20}
                                             isActive={this.state.menuIsVisible}
                                             toggleButton={this.toggleButton}
-                                            barColor="#444" />
+                                            barColor="#444"
+                                            />
+
+                                        <div style={title}>
+                                            <div style={mobileTitleName}>Vocdoni</div>
+                                            <div style={titleLogo}>{VocdoniLogo()}</div>
+                                        </div>
 
                                     </div>
                                     {this.renderMenu(this.state.menuIsVisible)}
