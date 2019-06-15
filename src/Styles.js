@@ -40,7 +40,7 @@ export default {
 
     column: {
         width: "100%",
-        maxWidth: 380,
+        maxWidth: 360,
         display: "flex",
         flexDirection: "row",
         alignItems: "flex-start",
