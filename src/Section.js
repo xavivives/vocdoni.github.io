@@ -14,7 +14,7 @@ export default class Section extends React.Component {
             mobileChild2 = this.props.child1
         }
         return (
-            <div style={{ paddingTop: 60, paddingBottom: 120 }}>
+            <div style={{ paddingTop: 40, paddingBottom: 80 }}>
 
                 <div style={Styles.pageCenter}>
                     <Mobile>

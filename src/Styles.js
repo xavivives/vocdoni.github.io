@@ -53,6 +53,7 @@ export default {
         borderRadius: 5,
         display: "inline-block",
         cursor: "pointer",
+        marginTop: 40,
     },
 
     highlight: {

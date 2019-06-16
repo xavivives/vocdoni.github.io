@@ -9,7 +9,7 @@ const fixed = {
     top: 0,
     left: 0,
     width: "100%",
-    backgroundColor: Styles.backgroundColor,
+    backgroundColor: "#f3f0ede3",
 }
 
 const buttonsRow = {
