@@ -11,7 +11,8 @@ const title = {
     fontSize: 40,
     fontWeight: 400,
     width: "100%",
-    paddingBottom: 50
+    paddingBottom: 40,
+    lineHeight: "1.2em"
 }
 
 const featuredImage = {
@@ -26,19 +27,23 @@ export default class Main extends React.Component {
     }
 
     gotoDocs() {
-        //window.open("http://vocdoni.io/docs")
-        Track();
+        window.open("http://vocdoni.io/docs")
+        //Track();
+    }
+
+    gotoForm() {
+        window.open("https://xavi306763.typeform.com/to/eyvvuN")
     }
 
     getReimaginingPage = () => {
         return <Section
             filpChildsOnMobile={true}
-            title={<div style={title}> Reimagining <span style={Styles.highlight}>Governance</span></div>}
+            title={<div style={title}> Reimagining  <span style={Styles.highlight}>governance</span></div>}
             child1={
                 <div>
 
-                    <p>Up until today, participation has been constrained by the physicality of how we cast our vote.</p>
-                    <p>Vocdoni provides the necessary tools for your organization to reinvent what governance can be.</p>
+                    <p>Up until today, voting and therefore participation, have been constrained by the physicality of how we cast our vote.</p>
+                    <p>Vocdoni provides the necessary tools for your organization to reinvent what governance is.</p>
                 </div>
             }
             child2={
@@ -61,12 +66,10 @@ export default class Main extends React.Component {
             }
             child2={
                 <div>
-                    <p>What does it meat to express your will...  <span style={Styles.highlight}>anytime, anywhere!</span></p>
-                    <p>We can make governance a conversation.</p>
-                    <p>Enable  frictionless participation on your community.</p>
-                    <p>Let us know what you need</p>
-                    <div style={Styles.button}>
-                        Request invitation to join the Beta
+                    <p>What does it mean to express your ideas, your will, your needs... <span style={Styles.highlight}>anytime, anywhere!</span></p>
+                    <p>Your organization can make governance a conversation, let's enable frictionless participation!</p>
+                    <div style={Styles.button} onClick={() => this.gotoForm()}>
+                        Request invitation to join the  <span style={Styles.highlight}>Beta</span>
                     </div>
                 </div>
             }
@@ -80,13 +83,11 @@ export default class Main extends React.Component {
 
             child1={
                 <div>
-                    <p> The most critical elections today still relay on an envelop to guarantee its integrity. </ p>
-                    <p>Vocdoni gives cryptographic guarantees and make voting trully digital.</p>
-
-                    <p> Powered by <span style={Styles.highlight}>Vocdoni Open Stack</span>, any third party can verifiy the integrity of the system</p>
+                    <p> The most critical elections today still rely on an envelop to guarantee its integrity. </ p>
+                    <p>Powered by Vocdoni <span style={Styles.highlight}> Open Stack</span>, and by using high-end cryptography, anyone can verify the integrity of the system allowing voting to become truly digital.</p>
                     <p>Don't trust us<span style={Styles.highlight}> TRUST THE MATH </span></p>
                     <div style={Styles.button} onClick={(e) => this.gotoDocs()}>
-                        See technical specifications
+                        Go to Vocdoni <span style={Styles.highlight}>Open Stack</span> docs
                     </div>
                 </div>
             }
@@ -104,7 +105,7 @@ export default class Main extends React.Component {
 
     getBiometricPage = () => {
         return <Section
-            title={<div style={title}> <span style={Styles.highlight}>Biometric verification</span> with ease </div>}
+            title={<div style={title}>An <span style={Styles.highlight}> authentic </span> user base </div>}
 
             child1={
                 <img
@@ -115,10 +116,25 @@ export default class Main extends React.Component {
 
             child2={
                 <div key='child3'>
-                    <p>Vocdoni integrates with the best existing <span style={Styles.highlight}>BIOMETRIC VERIFICATION</span> solutions, so you can  ensure that the participants in your organization are who you think they are.</p>
+                    <p>Finely tune who can participate in each process. Request the user data that is meaningful to your organization.</p>
+                    <p>Vocdoni integrates with the best <span style={Styles.highlight}>BIOMETRIC VERIFICATION</span> and <span style={Styles.highlight}>PAYMENT</span> solutions and provides tools to finely manage your user database, so you can ensure that the participants in your organization are who should be.</p>
+                </div>
+            }
+        />
+    }
 
-                    <p>No need for it?  Or you want to use your own authentication mechanisms?</p>
-                    <p>You can always use your own infrastructure.</p>
+    getPrivacyPage = () => {
+        return <Section
+            title={<div style={title}><span style={Styles.highlight}>Data protected </span> from  the heart</div>}
+            child1={
+                <div>
+                    <p>Vocdoni is a privacy-centric project, where every user is in full control of the data they share and each organization is the full owner their <span style={Styles.highlight}>GDPR compliant</span>  secure database</p>
+
+                </div>
+            }
+            child2={
+                <div>
+                    <p>Our business model is not around vendor lock-in so you can always migrate your data or use your own infrastructure.</p>
                 </div>
             }
         />
@@ -168,7 +184,7 @@ export default class Main extends React.Component {
                 {this.getCommunityPage()}
                 {this.getUniversaly()}
                 {this.getBiometricPage()}
-                {this.getMillionsPage()}
+                {this.getPrivacyPage()}
 
             </Pages>
             <Background />
