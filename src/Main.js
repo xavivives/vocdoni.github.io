@@ -42,7 +42,6 @@ export default class Main extends React.Component {
             title={<div style={title}> Reimagining  <span style={Styles.highlight}>governance</span></div>}
             child1={
                 <div>
-
                     <p>Up until today, voting and therefore participation, have been constrained by the physicality of how we cast our vote.</p>
                     <p>Vocdoni provides the necessary tools for your organization to reinvent what governance is.</p>
                 </div>
@@ -98,7 +97,6 @@ export default class Main extends React.Component {
                     style={featuredImage}
                     src={process.env.PUBLIC_URL + '/assets/universallyVerifiable.png'}
                 />
-
             }
         />
     }
@@ -130,7 +128,6 @@ export default class Main extends React.Component {
             child1={
                 <div>
                     <p>Vocdoni is a privacy-centric project, where every user is in full control of the data they share and each organization is the full owner their <span style={Styles.highlight}>GDPR compliant</span>  secure database</p>
-
                 </div>
             }
             child2={
