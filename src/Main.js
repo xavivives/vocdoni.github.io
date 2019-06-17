@@ -27,11 +27,12 @@ export default class Main extends React.Component {
     }
 
     gotoDocs() {
+        Track("Docs")
         window.open("http://vocdoni.io/docs")
-        //Track();
     }
 
     gotoForm() {
+        Track("Form")
         window.open("https://xavi306763.typeform.com/to/eyvvuN")
     }
 
@@ -79,7 +80,7 @@ export default class Main extends React.Component {
     getUniversaly = () => {
         return <Section
             filpChildsOnMobile={true}
-            title={<div style={title}> <span style={Styles.highlight}>univesally verifiable</span> Voting system </div>}
+            title={<div style={title}> <span style={Styles.highlight}>universally verifiable</span> Voting system </div>}
 
             child1={
                 <div>
